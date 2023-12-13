@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link  rel="stylesheet" href='/static/css/bootstrap.css'> 
+        <link rel="stylesheet" href='/static/css/calculator.css'>
+    </head>
+    <body>
+        <div style="height:700px;" class="container dbox">
+            <div class="row">
+                <div class="col-sm-12">
+                  <center>  <h1 style="font-family:times;">Even Or Odd</h1></center><hr color="yellow"><br><br>
+                    <form method="post">
+                        {% comment %} ye humne manual form validation implement kiya haiin do line me  {% endcomment %}
+                    {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            Please Enter The Value
+                        </div>
+                    {% endif %} 
+                        {% csrf_token %}
+                        <h2 style="font-family:times;">Value1</h2>
+                        <br>
+                        <input  type="text" name="num1" class="form-control"/><br><br>
+                        <br>
+                        <button class="button" type="submit">Even Or Odd</button><br> 
+                         <br><br>
+                        <h1 style="font-family:times;">Output</h1><br>
+                        <input  type="text" value="{{d}}" class="form-control"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link  rel="stylesheet" href='/static/css/bootstrap.css'> 
+        <link rel="stylesheet" href='/static/css/calculator.css'>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div class="container dbox">
+            <div class="row">
+                <div class="col-sm-12">
+                  <center>  <h1 style="font-family:times;">Calculator</h1> </center><hr color="red"><br><br>
+                    <form method="post">
+                        {% csrf_token %}
+                        <h2 style="font-family:times;">Value1</h2>
+                        <br>
+                        <input  type="text" name="num1" class="form-control"/><br><br>
+                        <br>
+                        
+                       
+                        <h2 style="font-family:times;">Value2</h2><br>
+                        <input  type="text" name="num2" class="form-control"/>
+                        <br><br>
+                        <h2 style="font-family:times;">Select Operator</h2><br>
+                        
+                        <select name="oprator" class="form-control">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select><br><br><br>
+                        <button class="button" type="submit"><h2 style="color:black;" >  Calculate  </h2></button> <br> 
+                         <br><br>
+                        <h1 style="font-family:times;">Output</h1>
+                        <br>
+                        <input  type="text" value="{{c}}" class="form-control"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/css/calculator.css">
+        <link rel="stylesheet" href='/static/css/bootstrap.css'> 
+    </head>
+    <body class="body"> 
+    <div  style="height:1500px;margin-bottom:10px;" class="container dbox">
+        <div class="row">
+            <div class="col-sm-12"><br>
+              <center>  <h1 style="font-family:times;shadow:10px 12px 14px white;"><b>MARKSHEET</b></h1>   </center> <hr class="hr">
+                <form method="post">
+                    {% csrf_token %}
+                <h2 style="font-family:times;">Subject1</h2><br>
+                <input type="text" name="sub1" class="form-control"/><br><br>
+                <h2 style="font-family:times;">Subject2</h2><br>
+                <input type="text" name="sub2" class="form-control"/><br><br>
+                <h2 style="font-family:times;">Subject3</h2><br>
+                <input type="text" name="sub3" class="form-control"/><br><br>
+                <h2 style="font-family:times;">Subject4</h2><br>
+                <input type="text" name="sub4" class="form-control"/><br><br>
+                <h2 style="font-family:times;">Subject5</h2><br>
+                <input type="text" name="sub5" class="form-control"/><br><br> 
+
+                <button  class="button" type="submit"><h3>Marksheet</h3></button><br><br>
+                <h1 style="font-family:times;"><center>Total Marks </center></h1><br>
+                <input type="text" value="{{total}}" class="form-control"/><br><br>
+                <h1 style="font-family:times;"><center>Percentage </center></h1><br>
+                <input type="text" value="{{p}}" class="form-control"/><br><br>
+                <h1 style="font-family:times;"><center>Grade </center></h1><br>
+                <input type="text" value="{{div}}" class="form-control"/><br><br> 
+                </form>
+            </div>
+        </div>
+    </div> 
+    </body>
+</html>

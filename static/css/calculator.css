@@ -1,0 +1,31 @@
+.body{
+    background-color: rgb(255, 255, 255);
+}
+.dbox{
+    background-color: #646464;
+
+    width: 1100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 74px black;
+    height: 1000px;
+}
+.button{
+    width: 300px;
+    height: 50px;
+    border: 4px solid var(--bs-white);
+    background-color: var(--bs-white);
+    font-family:'Times';
+    box-shadow: 10px 15px 14px black;
+}
+.button:hover{
+    background-color:rgba(128, 128, 128, 0.021);
+    width: 290px;
+    height:48px;
+    border-color: rgb(255, 254, 254);  
+}
+hr{
+    height: 10px;
+    background-color: white;
+    width: 1080px;
+}
